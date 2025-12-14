@@ -1,0 +1,239 @@
+        /* בסיס הדף */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            background: #f3f6fb;
+            color: #222;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 16px 40px;
+        }
+
+        /* כותרת עליונה */
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .title-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f4e79, #4ea5ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #1f3556;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 14px;
+            color: #667;
+        }
+
+        /* כרטיסים */
+        main {
+            display: grid;
+            grid-template-columns: 1.1fr 1.2fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px 22px;
+            box-shadow: 0 4px 10px rgba(15, 35, 70, 0.08);
+        }
+
+        .card h2 {
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            color: #1f3556;
+        }
+
+        .card small {
+            display: block;
+            font-size: 12px;
+            color: #889;
+            margin-bottom: 12px;
+        }
+
+        /* טופס ה-URL */
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .url-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #ccd3e0;
+            font-size: 13px;
+            direction: ltr;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #1f4e79;
+            box-shadow: 0 0 0 2px rgba(31, 78, 121, 0.15);
+        }
+
+        .btn {
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: #1f4e79;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #163854;
+        }
+
+        .btn-secondary {
+            background: #e4ecf7;
+            color: #1f3556;
+        }
+
+        .btn-secondary:hover {
+            background: #d5e0f2;
+        }
+
+        .helper-text {
+            font-size: 12px;
+            color: #889;
+            margin-top: 4px;
+        }
+
+        /* הודעות מצב */
+        .status {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .status.error {
+            color: #b61010;
+        }
+
+        .status.info {
+            color: #555;
+        }
+
+        /* כרטיס תוצאות */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .results-summary {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .results-table-wrapper {
+            max-height: 360px;
+            overflow: auto;
+            border-radius: 8px;
+            border: 1px solid #e0e5f0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        thead {
+            background: #f5f7fc;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        th, td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #edf0f6;
+            text-align: right;
+        }
+
+        th {
+            font-weight: 600;
+            color: #445;
+        }
+
+        tr:nth-child(even) td {
+            background: #fbfcff;
+        }
+
+        .tag-old {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 999px;
+            background: #ffe5e5;
+            color: #b61010;
+            font-size: 11px;
+        }
+
+        .empty-state {
+            font-size: 13px;
+            color: #777;
+            padding: 14px;
+        }
+
+        /* פוטר קטן */
+        footer {
+            margin-top: 28px;
+            font-size: 11px;
+            color: #99a;
+            text-align: left;
+            direction: ltr;
+        }
+
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }

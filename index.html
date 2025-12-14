@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+      <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>בדיקת מסמכים ישנים ב-SharePoint</title>
+
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="title-row">
+            <div class="title-icon">🗂️</div>
+            <div>
+                <h1>בדיקת מסמכים ישנים ב-SharePoint</h1>
+                <p class="subtitle">
+                    כלי פנימי לאיתור מסמכים בני יותר משנתיים בספריות אתר היחידה.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- כרטיס הזנת URL -->
+        <section class="card">
+            <h2>טעינת URL של ספרייה</h2>
+            <small>
+                הדבק כאן את כתובת הספרייה ב-SharePoint (לא דף ה-SitePage).
+            </small>
+
+            <label for="urlInput">כתובת ספרייה (URL)</label>
+            <div class="url-row">
+                <input id="urlInput" type="text"
+                       placeholder="https://base0010sites.aimet/sites/...../Documents/Forms/AllItems.aspx">
+                <button id="scanBtn" class="btn btn-primary">🚀 סרוק מסמכים</button>
+            </div>
+
+            <button id="loadFromExisting" class="btn btn-secondary">
+                🔁 טעינת URL קיים
+            </button>
+
+            <div class="helper-text">
+                לדוגמה: היכנס לספרייה הרצויה &gt; העתק את ה-URL מהדפדפן &gt; הדבק כאן.
+            </div>
+
+            <div id="status" class="status info">
+                טרם בוצעה סריקה.
+            </div>
+        </section>
+
+        <!-- כרטיס תוצאות -->
+        <section class="card">
+            <div class="results-header">
+                <h2>תוצאות סריקה</h2>
+                <div class="results-summary" id="resultsSummary">
+                    אין נתונים להצגה.
+                </div>
+            </div>
+
+            <div class="results-table-wrapper" id="resultsTableWrapper">
+                <div class="empty-state">
+                    עדיין לא נסרקה ספרייה. לאחר הסריקה יופיעו כאן מסמכים בני יותר משנתיים.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Built for training • No real SharePoint connection yet
+    </footer>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
